@@ -43,10 +43,10 @@ document.addEventListener('keyup', function(event) {
 });
 
 socket.on('playerId', function (plId) {
-    var key = document.getElementById('key');
+    var key = document.getElementById('content__key');
     console.log(plId.num);
     playId = plId.num;
-    key.innerHTML="<p>Ваш ключ:" + playId + "</p>";
+    key.innerHTML="<h2>Подключение создано<br>Ваш ключ: " + playId + "</h2>";
 });
 
 setInterval(function() {
@@ -55,12 +55,12 @@ setInterval(function() {
 }, 1000 / 60);
 
 var canvas = document.getElementById('canvas');
-canvas.width = 800;
-canvas.height = 600;
+canvas.width = 300;
+canvas.height = 300;
 var context = canvas.getContext('2d');
 socket.on('state', function(players) {
   //console.log(players);
-  context.clearRect(0, 0, 800, 600);
+  context.clearRect(0, 0, 300, 300);
   context.fillStyle = 'red';
   var player = players[playId];
   context.beginPath();

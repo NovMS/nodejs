@@ -41,10 +41,10 @@ bDown.addEventListener('mouseup', function(event) {
 });
 
 socket.on('playerId', function (plId) {
-    var key = document.getElementById('key');
+    var key = document.getElementById('content__key');
     console.log(plId.num);
     playId = plId.num;
-    key.innerHTML="<p>Ваш ключ:" + playId + "</p>";
+    key.innerHTML="<h2>Подключение установлено<br>Ваш ключ: " + playId + "</h2>";
 });
 
 setInterval(function() {

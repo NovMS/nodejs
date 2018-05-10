@@ -1,0 +1,95 @@
+/* Style index.html */
+.links {
+    border: 2px dotted black;
+    overflow: hidden;
+    width: 350px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.links__head {
+    text-align: center;
+}
+
+.links__pc,
+.links__tel {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    width: 165px;
+}
+
+.links__pc {
+    float: left;
+}
+
+.links__tel {
+    float: right;
+    margin-left: 10px;
+}
+
+/* Style tel.html */
+.form-tel {
+    border: 2px dotted black;
+    overflow: hidden;
+    width: 350px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.form-tel__key {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 50%;
+    border: 2px solid black;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-tel__connect {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
+    color: black;
+    border: 2px solid black;
+    width: 50%;
+}
+
+/* Style game.html */
+.content {
+    width: 350px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px dotted black;
+    text-align: center;
+}
+
+#canvas {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+/* Style gamepad.html */
+#left,
+#right,
+#up,
+#down {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+#up{
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+#left {
+    margin-left: 0;
+}

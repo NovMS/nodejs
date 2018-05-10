@@ -17,7 +17,7 @@ var id = {
 app.set('port', 5000);
 app.use('/static', express.static(__dirname + '/static'));
 
-app.use('/way', express.static(__dirname + '/way'));
+app.use('/', express.static(__dirname + '/'));
 
 app.get('/', function(request, response) {
   response.sendFile(path.join(__dirname, 'index.html'));
@@ -35,7 +35,7 @@ app.post('/form_tel', function(req, res) {
     console.dir(req.body);
     id.num = req.body.first_name;
     if (players[id.num]){
-        res.redirect('way/gamepad.html');
+        res.redirect('gamepad.html');
     }
     else {
         res.status(404).send('Такого подключения не существует')
@@ -53,12 +53,12 @@ app.post('/form_pc', function(req, res) {
     if (players[id.num]){}
     else {
         players[id.num] = {
-            x: 300,
-            y: 300
+            x: 50,
+            y: 50
         };
     }
     console.dir(id);
-    res.redirect('way/game.html');
+    res.redirect('game.html');
 });
 
 io.on('connection', function(socket) {
@@ -79,10 +79,10 @@ io.on('connection', function(socket) {
     if (data.up && player.y != 0) {
       player.y -= 5;
     }
-    if (data.right && player.x != 800) {
+    if (data.right && player.x != 300) {
       player.x += 5;
     }
-    if (data.down && player.y != 600) {
+    if (data.down && player.y != 300) {
       player.y += 5;
     }
   });
